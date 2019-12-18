@@ -1,16 +1,34 @@
 # Notes
 
-## Language:
-Python
+Language: Python (3.6)
 
-## Premise:
+Premise
+
 There are two ways to do this:
 
 1. Real time detection - A program that runs in the background at all times and checks the files at certain time intervals.
 2. A program that can be run at any point to check for changes until that time.
 
-Additionally, to compare a file to its older version, we need to save the older state separately, so that it is not affected by changes.
+The first solution can be easily derived from the second by adding polling. The solution here is therefore of the second type. This is also less resource-intensive.
 
+Additionally, to compare a file to its older version, we need to save the older state separately, so that it is not affected by changes. This can be done by adding a string to a file for every file in the given list. Here, since the solution has to be restricted to the standard library, I will simply assume that the files are not too large, and store their content copies.
+
+
+## Usage
+
+Clone this repo
+```
+git clone https://github.com/gargimaheshwari/enlyze-application
+```
+
+To prepare the system for use of this program, add the list of files that need watching to the repo folder run the `first_run.py` file.
+```
+python first_run.py
+```
+Thereafter, every time the files need to be checked, run the `program.py` file.
+```
+python program.py
+```
 
 # Generic Challenge
 
