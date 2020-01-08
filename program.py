@@ -32,3 +32,5 @@ for i, f in enumerate(files):
 if changed:
     log(messages)
     update_times(files)
+else:
+    log(["No changes"])
