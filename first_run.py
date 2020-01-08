@@ -2,16 +2,15 @@ import os
 from shutil import copy
 from functions import update_times, clean_str
 
-f = open("list_of_files.txt", "r")
-list_files = f.readlines()
-f.close()
+with open("list_of_files.txt", "r") as f:
+    list_files = f.readlines()
 
 files = []
-for file in list_files:
-    files.append(clean_str(file))
+for f in list_files:
+    files.append(clean_str(f))
 
 os.makedirs("file_versions", exist_ok = True)
-for file in files:
-    copy(file, "file_versions")
+for f in files:
+    copy(f, "file_versions")
 
 update_times(files)
