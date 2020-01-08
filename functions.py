@@ -10,8 +10,8 @@ def clean_str(text):
 
 def update_times(files):
     with open("last_edit_times.txt", "w+") as f:
-        for file in files:
-            f.write(str(os.path.getmtime(file)))
+        for x in files:
+            f.write(str(os.path.getmtime(x)))
             f.write("\n")
     
 def clean_set(s):
@@ -21,8 +21,8 @@ def clean_set(s):
         x.add(clean_str(a))
     return x
 
-def file_changes(file, copy):
-    with open(file, "r") as f:
+def file_changes(input_file, copy):
+    with open(input_file, "r") as f:
         x = set(f)
     with open(copy, "r") as fcopy:
         y = set(fcopy)
@@ -35,8 +35,8 @@ def file_changes(file, copy):
     
     return added, removed
 
-def change_message(file, copy, date, name):
-    added, removed = file_changes(file, copy)
+def change_message(input_file, copy, date, name):
+    added, removed = file_changes(input_file, copy)
     message = name + " " + date
     if added:
         message = message + " Elements added: {}".format(added)
