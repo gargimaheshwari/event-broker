@@ -30,6 +30,10 @@ Thereafter, every time the files need to be checked, run the `program.py` file.
 python program.py
 ```
 
+# Testing
+
+To test the functionality of this program, clone the repo and create a text file `test.txt` in the repo folder. Run `testing.py` to automatically create a list of files with `test.txt` in it. Thereafter run `first_run.py` and `program.py`, make changes to the test file and run `program.py` again, and so on.
+
 # Generic Challenge
 
 Within the following assignment, we'll be touching on the basic components of software engineering and design. 
