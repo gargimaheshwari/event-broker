@@ -21,7 +21,7 @@ Clone this repo
 git clone https://github.com/gargimaheshwari/event-broker
 ```
 
-To prepare the system for use of this program, add the list of files that need watching as `list_of_files.txt` to the repo folder run the `first_run.py` file.
+To prepare the system for use of this program, add the list of files that need watching as `list_of_files.txt` to the repo folder and run the `first_run.py` file.
 ```
 python first_run.py
 ```
